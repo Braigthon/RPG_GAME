@@ -1,4 +1,4 @@
-# Install script for directory: /home/brayan/POO/Rpg_Game/Project_Game
+# Install script for directory: /home/brayan/POO/RPG_Game/Project_Game
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/brayan/POO/Rpg_Game/Project_Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/brayan/POO/RPG_Game/Project_Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

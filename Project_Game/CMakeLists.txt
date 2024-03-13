@@ -10,4 +10,8 @@ add_executable(Project_Game main.cpp
         Player/Player.h
         Enemy/Enemy.cpp
         Enemy/Enemy.h
+        Utils.h
+        Combat/Combat.cpp
+        Combat/Combat.h
+        Combat/Action.h
 )

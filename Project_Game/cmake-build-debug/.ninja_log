@@ -1,11 +1,8 @@
 # ninja log v5
-286	361	1708319032952329494	Project_Game	85d0ba4af522ad95
-1	280	1708313424459321617	CMakeFiles/Project_Game.dir/Enemy/Enemy.cpp.o	e808c2b468447275
-1	231	1708311890435855742	CMakeFiles/Project_Game.dir/Character/Character.cpp.o	bb453d92fb277a73
-1	282	1708313424463322009	CMakeFiles/Project_Game.dir/Player/Player.cpp.o	607d00d48bbcdf1b
-0	285	1708319032824328273	CMakeFiles/Project_Game.dir/main.cpp.o	2c727ba652e103f5
-2	267	1708319801212412727	CMakeFiles/Project_Game.dir/Character/Character.cpp.o	465202c8c106374e
-2	278	1708319801272413283	CMakeFiles/Project_Game.dir/Player/Player.cpp.o	9e4f9c0f233830cd
-2	292	1708319801288413431	CMakeFiles/Project_Game.dir/Enemy/Enemy.cpp.o	317a55273e0cb2cb
-0	280	1708319812764519341	CMakeFiles/Project_Game.dir/main.cpp.o	b8ba75a1e7491eb6
-280	337	1708319812872520335	Project_Game	85d0ba4af522ad95
+2	669	1710134364824735373	CMakeFiles/Project_Game.dir/Combat/Combat.cpp.o	852f8219f934fde6
+669	739	1710134364924760567	Project_Game	6eab8ba02b0be4d2
+2	395	1710352195907401512	CMakeFiles/Project_Game.dir/Enemy/Enemy.cpp.o	2c68b7dcb36247ce
+1	390	1710352195847401075	CMakeFiles/Project_Game.dir/Character/Character.cpp.o	cab493ce8206e058
+2	473	1710134364656693047	CMakeFiles/Project_Game.dir/Player/Player.cpp.o	790c8e2b31d67396
+1	460	1710352195971401978	CMakeFiles/Project_Game.dir/main.cpp.o	e72517d2e2790f04
+0	75	1710365386185229577	build.ninja	1be3e9e7c62d6895

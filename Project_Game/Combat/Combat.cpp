@@ -46,22 +46,24 @@ void Combat::addParticipant(Character *participant) {
 
 void Combat::prepareCombat() {
     sort(participants.begin(), participants.end(), compareSpeed);
+}
 
-    void Combat::doCombat() {
-        prepareCombat();
+void Combat::doCombat() {
+    prepareCombat();
 
-        while (enemies.size() != 0 && teamMembers.size() != 0) {
-            registerActions();
-            executeActions();
-        }
+    while (enemies.size() != 0 && teamMembers.size() != 0) {
+        registerActions();
+        executeActions();
+    }
 
-        if (enemies.size() == 0) {
-            cout << "Congrats" << endl;
-        } else {
-            cout << "You Died - Game Over" << endl;
-        }
+    if (enemies.size() == 0) {
+        cout << "Congrats" << endl;
+    }
+    else {
+        cout << "You Died - Game Over" << endl;
     }
 }
+
 
 void Combat::registerActions() {
     vector<Character*>::iterator participant = participants.begin();
@@ -72,35 +74,56 @@ void Combat::registerActions() {
         if ((*participant)->getIsPlayer()) {
             currentAction = ((Player*)*participant)->takeAction(enemies);
         } else {
-            currentAction = ((Enemy*)*participant)->takeAction(teamMembers);
+            if (!((Enemy*)*participant)->fleedComplete()) {
+                currentAction = ((Enemy*)*participant)->takeAction(teamMembers);
+            }
         }
         actions.push(currentAction);
         participant++;
     }
 }
 
+
 void Combat::executeActions() {
     while (!actions.empty()) {
         Action currentAction = actions.top();
         currentAction.action();
-        checkForFlee(currentAction.subcriber);
-        checkParticipantStatus(currentAction.subcriber);
-        checkParticipantStatus(currentAction.target);
+        checkForFlee(currentAction.subscriber);
+        if (!currentAction.subscriber->fleedComplete()) {
+            checkParticipantStatus(currentAction.subscriber);
+            checkParticipantStatus(currentAction.target);
+        }
+
         actions.pop();
+    }
+}
+
+void Combat::checkParticipantStatus(Character* participant) {
+    if(participant->getHealth() <= 0) {
+        if(participant->getIsPlayer()) {
+            teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), participant), teamMembers.end());
+        }
+        else {
+            enemies.erase(remove(enemies.begin(), enemies.end(), participant), enemies.end());
+        }
+        participants.erase(remove(participants.begin(), participants.end(), participant), participants.end());
     }
 }
 
 void Combat::checkForFlee(Character *character) {
     bool fleed = character->fleedComplete();
-    if(fleed) {
-        if (character->getIsPlayer()) {
-            cout << "you fled, hen!" << endl;
-            teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
-        } else {
-            cout << character->getName() << "has fleed the combat" << endl;
-            enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
+    if (fleed) {
+        auto it = std::find_if(participants.begin(), participants.end(), [character](Character* p) { return p == character; });
+        if (it != participants.end()) {
+            if ((*it)->getIsPlayer()) {
+                cout << "you fled, hen!" << endl;
+                teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
+            } else {
+                cout << character->getName() << " has fleed the combat" << endl;
+                enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
+            }
+            participants.erase(it);
         }
-        participants.erase(remove(participants.begin(), participants.end(), character), participants.end());
     }
 }
 

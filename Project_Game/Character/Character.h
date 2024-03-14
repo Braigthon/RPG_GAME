@@ -39,6 +39,7 @@ public:
     string toString();
     bool getIsPlayer();
     bool fleedComplete();
+
 };
 
 

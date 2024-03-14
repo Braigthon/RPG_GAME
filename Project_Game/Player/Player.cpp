@@ -29,12 +29,9 @@ void Player::doAttack(Character *target) {
 
 void Player::takeDamage(int damage) {
     setHealth(health - damage);
-
-    if(health <= 0) {
+    cout<<"You have taken " << damage << " damage" << endl;
+    if (health <= 0) {
         cout<<"You have died"<<endl;
-    }
-    else {
-        cout<<"You have taken " << damage << " damage" << endl;
     }
 }
 
@@ -44,15 +41,21 @@ bool Player::flee(vector<Enemy*> enemies) {
     bool fleed = false;
     if(this->getSpeed() > fastestEnemy->getSpeed()) {
         fleed =  true;
+        cout<<"you have fleed"<<endl;
     }
     else {
         srand(time(NULL));
         int chance = rand() % 100;
         cout<< "chance: " << chance << endl;
-        fleed = chance > 99;
+        fleed = chance > 80;
+        if(fleed == true){
+            cout<< getName() << " you have fleed"<<endl;
+        } else{
+            cout<< getName() << " try flee"<<endl;
+        }
     }
 
-    return fleed;
+    return this->fleed = fleed;
 }
 
 void Player::emote() {
@@ -86,32 +89,37 @@ Character* Player::getTarget(vector<Enemy *> enemies) {
     return enemies[targetIndex];
 }
 
-ActionResult Player::takeAction(vector<Enemy*>enemies) {
+Action Player::takeAction(vector<Enemy*> enemies) {
     int option = 0;
     cout<<"Choose an action"<<endl;
     cout<<"1. Attack"<<endl;
     cout<<"2. Flee"<<endl;
     cin >> option;
     Character* target = nullptr;
-    bool fleed = false;
+
+    Action myAction;
+
+    myAction.speed = this->getSpeed();
+    myAction.subscriber = this;
+
     switch(option) {
         case 1:
             target = getTarget(enemies);
-            doAttack(target);
+            myAction.target = target;
+
+            myAction.action = [this, target]() {
+                doAttack(target);
+            };
             break;
         case 2:
-            fleed = flee(enemies);
-            if(fleed) {
-                cout<<"You have fled"<<endl;
-            }
-            else {
-                cout<<"You couldn't flee"<<endl;
-            }
+            myAction.action = [this, enemies]() {
+                flee(enemies);
+            };
             break;
         default:
             cout<<"Invalid option"<<endl;
             break;
     }
 
-    return ActionResult(target, fleed);
+    return myAction;
 }

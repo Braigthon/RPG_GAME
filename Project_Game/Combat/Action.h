@@ -12,14 +12,14 @@ class Character;
 
 struct Action {
     int speed = 0;
-    Character* subcriber = nullptr;
+    Character* subscriber = nullptr;
     Character* target = nullptr;
     std::function<void(void)> action = nullptr;
 
     Action(std::function<void(void)> _action, int _speed, Character* _subscriber, Character* _target) {
         action = _action;
         speed = _speed;
-        subcriber = _subscriber;
+        subscriber = _subscriber;
         target = _target;
     }
     Action(){};

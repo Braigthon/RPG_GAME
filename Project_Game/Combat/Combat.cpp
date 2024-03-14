@@ -64,6 +64,9 @@ void Combat::doCombat() {
     }
 }
 
+void Combat::eraseAction(target) {
+    Character* target =
+}
 
 void Combat::registerActions() {
     vector<Character*>::iterator participant = participants.begin();
@@ -99,6 +102,9 @@ void Combat::executeActions() {
 }
 
 void Combat::checkParticipantStatus(Character* participant) {
+    if(participant == nullptr)
+        return;
+
     if(participant->getHealth() <= 0) {
         if(participant->getIsPlayer()) {
             teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), participant), teamMembers.end());
@@ -119,7 +125,6 @@ void Combat::checkForFlee(Character *character) {
                 cout << "you fled, hen!" << endl;
                 teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
             } else {
-                cout << character->getName() << " has fleed the combat" << endl;
                 enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());
             }
             participants.erase(it);

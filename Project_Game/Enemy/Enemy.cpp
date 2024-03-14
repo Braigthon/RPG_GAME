@@ -69,13 +69,14 @@ bool Enemy::flee(vector<Player *> players) {
         int chance = rand() % 100;
         cout<< "chance: " << chance << endl;
         fleed = chance > 80;
-        if(fleed == true){
-            cout<< getName() << " has fleed"<<endl;
+        if(fleed){
+            cout << getName() << " has fleed the combat" << endl;
         } else{
             cout<< getName() << " try flee"<<endl;
         }
     }
     this->fleed = fleed;
+    return fleed;
 }
 
 

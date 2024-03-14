@@ -5,7 +5,7 @@
 
 int main() {
 
-    Player *player = new Player("Victor", 50, 10, 3, 1);
+    Player *player = new Player("Victor", 50, 10, 3, 50);
     Enemy *enemy = new Enemy("Goblin", 9, 5, 3, 7);
     Enemy *enemy2 = new Enemy("Orc", 20, 8, 5, 2);
 

@@ -22,11 +22,13 @@ private:
     vector<Player*> teamMembers;
     vector<Enemy*> enemies;
     priority_queue<Action> actions;
+    
 
     void prepareCombat();
     Character* getTarget(Character* target);
     void registerActions();
     void executeActions();
+    void eraseAction();
 
     void checkParticipantStatus(Character* participants);
     void checkForFlee(Character* character);

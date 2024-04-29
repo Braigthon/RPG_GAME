@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/brayan/POO/RPG_Game/Project_Game/cmake-build-debug",
-		"source" : "/home/brayan/POO/RPG_Game/Project_Game"
+		"build" : "/home/brayan/POO/RPG_GAME/Project_Game/cmake-build-debug",
+		"source" : "/home/brayan/POO/RPG_GAME/Project_Game"
 	},
 	"version" : 
 	{

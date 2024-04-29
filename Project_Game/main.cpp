@@ -5,9 +5,14 @@
 
 int main() {
 
-    Player *player = new Player("Victor", 50, 10, 3, 50);
-    Enemy *enemy = new Enemy("Goblin", 9, 5, 3, 7);
-    Enemy *enemy2 = new Enemy("Orc", 20, 8, 5, 2);
+    Player *player = new Player("goku", 50, 10, 3, 50);
+    Player *player2 = new Player("naruto", 50, 10, 3, 50);
+    Enemy *enemy = new Enemy("freezer", 9, 5, 3, 7);
+    Enemy *enemy2 = new Enemy("sasuke", 20, 8, 5, 2);
+
+    std::cout << "Player Name: " << player->getName() << std::endl;
+    std::cout << "Player Name: " << player2->getName() << std::endl;
+
 
     vector<Character*> participants;
     participants.push_back(player);

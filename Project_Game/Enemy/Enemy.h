@@ -19,7 +19,7 @@ private:
     int getMaxHealth() const;
 
 public:
-    Enemy(string, int, int, int, int);
+    Enemy(char name[30], int, int, int, int);
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     Character* getTarget(vector<Player*> teamMembers);

@@ -12,7 +12,7 @@
 
 using namespace std;
 
-Enemy::Enemy(string name, int health, int attack, int defense, int speed) : Character(name, health, attack, defense, speed, false) {
+Enemy::Enemy(char name[30], int health, int attack, int defense, int speed) : Character(name, health, attack, defense, speed, false) {
 }
 
 bool compareSpeed(Player *a, Player *b) {

@@ -64,10 +64,6 @@ void Combat::doCombat() {
     }
 }
 
-void Combat::eraseAction(target) {
-    Character* target =
-}
-
 void Combat::registerActions() {
     vector<Character*>::iterator participant = participants.begin();
 

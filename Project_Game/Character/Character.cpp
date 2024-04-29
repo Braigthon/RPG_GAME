@@ -4,8 +4,11 @@
 
 #include "Character.h"
 
-Character::Character(string _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
-    name = _name;
+Character::Character(char _name[30], int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
+    for (int i = 0; i < 29; i++) {
+        name[i] = _name[i]; // Copy characters from input array
+    }
+    name[29] = '\0';
     health = _health;
     attack = _attack;
     defense = _defense;
@@ -15,12 +18,18 @@ Character::Character(string _name, int _health, int _attack, int _defense, int _
     fleed = false;
 }
 
-void Character::setName(string _name) {
-    name = _name;
+void Character::setName(const char* newName) {
+    int i = 0;
+    while (newName[i] != '\0' && i < 29) {
+        name[i] = newName[i];
+        i++;
+    }
+    name[i] = '\0';
 }
 
+
 string Character::getName() {
-    return name;
+    return std::string(this->name);
 }
 
 void Character::setHealth(int _health) {
@@ -55,7 +64,7 @@ int Character::getSpeed() {
 }
 
 string Character::toString() {
-    return "name: " + name + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
+    return "name: " + std::string(name) + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
 }
 
 bool Character::getIsPlayer() {

@@ -22,7 +22,7 @@ private:
     vector<Player*> teamMembers;
     vector<Enemy*> enemies;
     priority_queue<Action> actions;
-    
+
 
     void prepareCombat();
     Character* getTarget(Character* target);

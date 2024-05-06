@@ -16,7 +16,6 @@ private:
     int maxHealth;
     int accumulatedDamage = 0;
 
-    int getMaxHealth() const;
 
 public:
     Enemy(char name[30], int, int, int, int);

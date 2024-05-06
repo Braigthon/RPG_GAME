@@ -4,7 +4,7 @@
 
 #include "Character.h"
 
-Character::Character(char _name[30], int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
+Character::Character(char* _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
     for (int i = 0; i < 29; i++) {
         name[i] = _name[i];
     }

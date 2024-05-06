@@ -22,7 +22,7 @@ protected:
     bool fleed;
 
 public:
-    Character(char name[30], int, int, int, int, bool);
+    Character(char* name, int, int, int, int, bool);
 
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;

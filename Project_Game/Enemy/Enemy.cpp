@@ -60,19 +60,22 @@ Character* Enemy::getTarget(vector<Player *> teamMembers) {
 
 bool Enemy::flee(vector<Player *> players) {
     std::sort(players.begin(), players.end(), compareSpeed);
-    Player* fastestPlayer = players[0];
+    Player *fastestPlayer = players[0];
     bool fleed = false;
-    if(this->getSpeed() > fastestPlayer->getSpeed()) {
-        fleed =  true;
-    } else{
-        srand(time(NULL));
-        int chance = rand() % 100;
-        cout<< "chance: " << chance << endl;
-        fleed = chance > 80;
-        if(fleed){
-            cout << getName() << " has fleed the combat" << endl;
-        } else{
-            cout<< getName() << " try flee"<<endl;
+    if(this->getHealth() > 0) {
+        if (this->getSpeed() > fastestPlayer->getSpeed()) {
+            fleed = true;
+        } else {
+            srand(time(NULL));
+            int chance = rand() % 100;
+            cout << "chance: " << chance << endl;
+            fleed = chance > 50;
+            if (fleed) {
+                fleed = true;
+                cout << getName() << " has fleed the combat" << endl;
+            } else {
+                cout << getName() << " try flee" << endl;
+            }
         }
     }
     this->fleed = fleed;

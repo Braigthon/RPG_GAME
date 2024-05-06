@@ -6,6 +6,7 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include "../Player/Player.h"
 
 using namespace std;
 
@@ -57,7 +58,7 @@ void Combat::doCombat() {
     }
 
     if (enemies.size() == 0) {
-        cout << "Congrats" << endl;
+        cout << "YOU WIN - Congrats" << endl;
     }
     else {
         cout << "You Died - Game Over" << endl;
@@ -118,7 +119,6 @@ void Combat::checkForFlee(Character *character) {
         auto it = std::find_if(participants.begin(), participants.end(), [character](Character* p) { return p == character; });
         if (it != participants.end()) {
             if ((*it)->getIsPlayer()) {
-                cout << "you fled, hen!" << endl;
                 teamMembers.erase(remove(teamMembers.begin(), teamMembers.end(), character), teamMembers.end());
             } else {
                 enemies.erase(remove(enemies.begin(), enemies.end(), character), enemies.end());

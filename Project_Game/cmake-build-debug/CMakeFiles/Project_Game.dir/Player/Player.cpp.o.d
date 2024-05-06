@@ -183,4 +183,5 @@ CMakeFiles/Project_Game.dir/Player/Player.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/brayan/POO/RPG_GAME/Project_Game/Player/../Utils.h
+ /home/brayan/POO/RPG_GAME/Project_Game/Player/../Utils.h \
+ /usr/include/string.h /usr/include/strings.h

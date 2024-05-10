@@ -7,7 +7,7 @@ int main() {
 
     Player *player = new Player("Itadori", 60, 8, 2, 30);
     Enemy *enemy = new Enemy("Sokuna", 9, 5, 3, 7);
-    Enemy *enemy2 = new Enemy("Mahito", 10, 8, 5, 2);
+    Enemy *enemy2 = new Enemy("Mahito", 20, 8, 5, 2);
 
     cout << "[" << player->getName() <<"\n vs \n["<< enemy->getName() << "\n["<< enemy2->getName() << "\n" <<endl;
 
@@ -18,6 +18,11 @@ int main() {
 
     Combat* combat = new Combat(participants);
     combat->doCombat();
+
+    //char* buffer = player->serialize();
+
+    //Player* ooootroPlayer = Player::unserialize(buffer);
+
 
     delete player;
     delete enemy;

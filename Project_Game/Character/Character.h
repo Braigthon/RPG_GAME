@@ -6,9 +6,6 @@
 #include <algorithm>
 #include "../Combat/Action.h"
 
-
-
-
 using namespace std;
 
 class Character {
@@ -20,9 +17,11 @@ protected:
     int speed;
     bool isPlayer;
     bool fleed;
+    int level = 1;
+
 
 public:
-    Character(char* name, int, int, int, int, bool);
+    Character(char* , int, int, int, int, bool);
 
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
@@ -41,6 +40,7 @@ public:
     bool getIsPlayer();
     bool fleedComplete();
 
+    void levelUp();
 };
 
 #endif //PROJECT_GAME_CHARACTER_H

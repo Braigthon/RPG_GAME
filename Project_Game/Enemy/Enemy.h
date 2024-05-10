@@ -17,6 +17,7 @@ private:
     int accumulatedDamage = 0;
 
 
+
 public:
     Enemy(char name[30], int, int, int, int);
     void doAttack(Character *target) override;
@@ -24,5 +25,6 @@ public:
     Character* getTarget(vector<Player*> teamMembers);
     Action takeAction(const vector<Player*>& players);
     bool flee(vector<Player *> Players);
+    void levelUp();
 };
 #endif //PROJECT_GAME_ENEMY_H

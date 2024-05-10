@@ -29,12 +29,14 @@ private:
     void registerActions();
     void executeActions();
     void eraseAction();
+    void levelUp();
 
     void checkParticipantStatus(Character* participants);
     void checkForFlee(Character* character);
 
 
 public:
+
     Combat(vector<Character*> _participants);
     Combat(vector<Player*> _teamMembers, vector<Enemy*> _enemies);
     Combat();
@@ -42,6 +44,7 @@ public:
     void doCombat();
     string participantsToString();
     void endCombat(){};
+
 };
 
 #endif //PROJECT_GAME_COMBAT_H

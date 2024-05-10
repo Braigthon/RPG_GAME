@@ -2,13 +2,11 @@
 // Created by brayan on 13/02/24.
 //
 
+#include <cstring>
 #include "Character.h"
 
 Character::Character(char* _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer) {
-    for (int i = 0; i < 29; i++) {
-        name[i] = _name[i];
-    }
-    name[29] = '\0';
+    strcpy(name, _name);
     health = _health;
     attack = _attack;
     defense = _defense;
@@ -75,3 +73,10 @@ bool Character::fleedComplete() {
     return fleed;
 }
 
+void Character::levelUp() {
+    level++;
+    setHealth(getHealth() + 10);
+    setAttack(getAttack() + 5);
+    setDefense(getDefense() +3);
+    setSpeed(getSpeed() + 5);
+}

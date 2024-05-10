@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <vector>
 #include "../Player/Player.h"
+#include "../Enemy/Enemy.h"
 
 using namespace std;
 
@@ -135,3 +136,4 @@ string Combat::participantsToString() {
     }
     return result;
 }
+

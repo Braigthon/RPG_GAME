@@ -17,14 +17,14 @@ class Enemy;
 class Player: public Character {
 
 protected:
-    Player(char* name, int health, int attack, int defense, int speed, bool isPlayer, int experience);
-
     int experience;
-    int level;
     int totalDamage;
+    int enemyLevel= 1;
 
 public:
     Player(char* _name, int _health, int _attack, int _defense, int _speed);
+    Player(char* _name, int _health, int _attack, int _defense, int _speed, bool _isPlayer, int _experience, int _level);
+
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     char* serialize();
@@ -37,12 +37,15 @@ public:
     bool flee(vector<Enemy*> enemies);
     void emote();
     void levelUp();
-    void gainExperience(int);
+    void gainExperience(int, Character *target);
 
     Action takeAction(vector<Enemy*> enemies);
 
+
+
 private:
     char buffer[Player::BUFFER_SIZE];
+    std::vector<Enemy*> enemies;
 };
 
 

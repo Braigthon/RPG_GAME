@@ -69,6 +69,7 @@ CMakeFiles/Project_Game.dir/Character/Character.cpp.o: /home/brayan/POO/RPG_GAME
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cstdlib \
+  /usr/include/c++/11/cstring \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/debug/assertions.h \
   /usr/include/c++/11/debug/debug.h \
@@ -107,6 +108,8 @@ CMakeFiles/Project_Game.dir/Character/Character.cpp.o: /home/brayan/POO/RPG_GAME
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
@@ -1179,6 +1182,12 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
+/usr/include/c++/11/bits/basic_ios.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
 /usr/include/c++/11/ext/type_traits.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
@@ -1219,13 +1228,9 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
-/usr/include/string.h:
-
 /usr/include/c++/11/cstdint:
 
-/home/brayan/POO/RPG_GAME/Project_Game/Utils.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+/usr/include/string.h:
 
 /home/brayan/POO/RPG_GAME/Project_Game/Combat/Combat.h:
 
@@ -1242,6 +1247,10 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 /usr/include/c++/11/ostream:
 
 /usr/include/c++/11/tuple:
+
+/usr/include/c++/11/cstring:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/c++/11/bits/char_traits.h:
 
@@ -1309,16 +1318,6 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 
 /usr/include/c++/11/bits/functional_hash.h:
 
-/home/brayan/POO/RPG_GAME/Project_Game/Player/Player.h:
-
-/usr/include/c++/11/functional:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/usr/include/c++/11/bits/basic_ios.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/c++/11/bits/predefined_ops.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -1328,8 +1327,6 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 /usr/include/c++/11/cwchar:
 
 /usr/include/c++/11/ext/numeric_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -1407,6 +1404,16 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
+/home/brayan/POO/RPG_GAME/Project_Game/Player/Player.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/c++/11/functional:
+
+/home/brayan/POO/RPG_GAME/Project_Game/Utils.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
 /usr/include/c++/11/initializer_list:
 
 /usr/include/c++/11/bits/ostream.tcc:
@@ -1447,16 +1454,6 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 
 /usr/include/features.h:
 
-/usr/include/strings.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/c++/11/bits/std_function.h:
-
-/usr/include/c++/11/bits/localefwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
 /usr/include/locale.h:
 
 /usr/include/c++/11/cctype:
@@ -1491,6 +1488,16 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/c++/11/bits/std_function.h:
+
+/usr/include/c++/11/bits/localefwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/strings.h:
+
 /usr/include/c++/11/bits/string_view.tcc:
 
 /usr/include/time.h:
@@ -1500,6 +1507,14 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 /usr/include/c++/11/bits/basic_string.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/c++/11/bits/stl_construct.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/c++/11/bits/hash_bytes.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -1520,16 +1535,6 @@ CMakeFiles/Project_Game.dir/main.cpp.o: /home/brayan/POO/RPG_GAME/Project_Game/m
 /usr/include/c++/11/climits:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/c++/11/bits/stl_construct.h:
-
-/usr/include/c++/11/bits/hash_bytes.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 

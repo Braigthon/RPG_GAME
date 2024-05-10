@@ -3,7 +3,6 @@
 //
 
 #include "Enemy.h"
-#include "../Player/Player.h"
 #include "../Character/Character.h"
 #include <iostream>
 #include <vector>
@@ -12,7 +11,7 @@
 
 using namespace std;
 
-Enemy::Enemy(char name[30], int health, int attack, int defense, int speed) : Character(name, health, attack, defense, speed, false) {
+Enemy::Enemy(char name[30], int health, int attack, int defense, int speed) : Character( name, health, attack, defense, speed, false) {
 }
 
 bool compareSpeed(Player *a, Player *b) {
@@ -109,4 +108,11 @@ Action Enemy::takeAction(const vector<Player*>&players) {
             };
     }
     return myAction;
+
+
 }
+void Enemy::levelUp() {
+    Character::levelUp();
+    }
+
+
